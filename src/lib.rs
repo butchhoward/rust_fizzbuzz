@@ -1,22 +1,17 @@
 pub mod fizzy {
     pub fn fizzbuzz(v: i32) -> String {
-        let mut result = String::new();
 
         if v <= 0 {
-            let s: String = v.to_string();
-            result.push_str(&s.to_owned());
+            return v.to_string();
         } else if v % (3*5) == 0 {
-            result.push_str("fizzbuzz");
+            return "fizzbuzz".to_string();
         } else if v % 3 == 0 {
-            result.push_str("fizz");
+            return "fizz".to_string();
         } else if v % 5 == 0{
-            result.push_str("buzz");
-        } else {
-            let s: String = v.to_string();
-            result.push_str(&s.to_owned());
+            return "buzz".to_string();
         }
 
-        return result;
+        return v.to_string();
     }
 }
 
